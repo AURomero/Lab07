@@ -1,0 +1,278 @@
+---
+title: 'Stats 250: Project #2 Supplement'
+author: "Replace this text with your name"
+date: "Monday, June 5th"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+### Instructions
+
+Instead of a lab assignment this week, you will be completing your analysis for the second project. Each of the 10 questions will be graded out of 5 points (for a total of 50 points). These questions will be graded for *correctness*. Upon completion, follow the submission instructions at the bottom of this document. We strongly encourage you to work on this assignment with a partner, but everyone must submit their own document to Canvas. 
+
+
+***
+
+
+### Background
+
+You are working as an analyst at the investment consulting firm WMB (We Mean Business, Inc.). WMB has a new client whose leadership wants to better understand the characteristics of business pitches on Shark Tank.  You have been provided with a random sample of entrepreneurs/products on Shark Tank from Seasons 1- 6. 
+
+**Data Set**
+
+This data set contains data from 495 randomly selected entrepreneurs/products that were on Shark Tank. The variables in the data set are:
+
+- `deal`: whether or not a deal was made with a Shark (yes or no)
+- `entrepreneurs`: number of entrepreneurs presenting the idea (single or multiple)
+- `season`: when the idea was presented (early (seasons 1-3) or late (seasons 4-6))
+- `type`: category of the idea presented (leisure or necessity)
+- `amount`: requested funding from the entrepreneur(s) (in thousands of dollars)
+- `equity`: percent of the business the entrepreneur(s) will give in exchange for funding
+- `valuation`: believed company worth according to the entrepreneur(s) (in millions of dollars)
+
+
+Looking back at the success fo the show, the clients are interested in the following questions:
+
+
+**Questions of Interest**
+
+1. On average, is there a difference between funding requested by entrepreneurs who land a deal with a Shark versus those who do not land a deal with a Shark?
+2. On average, is there a difference in equity in exchange for funding between teams with multiple entrepreneurs compared to single entreprenuers?
+3. On average, is there a difference in equity in exchanged for funding between entrepreneurs in earlier seasons compared to later seasons?
+4. On average, is there a difference in valuation between entrepreneurs in early seasons compared to later seasons?
+5. Are leisure type products less likely to land a deal with a Shark compared to necessity type products?
+6. Are sharks making more deals in later seasons compared to earlier seasons of the show?
+7. Is the likelihood a shark makes a deal different when comparing a single entrepreneur pitching the product idea versus multiple entrepreneurs? 
+
+Use the following code chunk to read in the data set: 
+
+```{r readProject2Data}
+sharktank <- read.csv("SharkTank.csv")
+```
+
+And be sure to load in the required package!
+
+```{r loadPackages}
+library(stats250package)
+```
+
+
+***
+
+### Exercises
+
+After reading in the data set above, complete the following lab exercise. Remember, these exercises are worth 5 points each and are graded for correctness.
+
+#### Analysis 1: Estimating the Average Requested Funding. 
+
+For Exercises 1 - 2, you will complete the following analysis. 
+
+You would like to estimate the average requested funding for all entrepreneurs pitching a business idea on Shark Tank.
+
+> **Exercise 1.** You may assume that this data is a random sample. State the additional assumption needed to perform this analysis. Use the code chunk to check the assumption. Below the code chunk, comment on whether or not the stated assumption is reasonable *and* comment on whether of nor you can proceed with the statistical analysis. Briefly explain both of your answers.
+
+*Exercise 1a-State the Additional Assumption:* Replace this text with your answer.
+
+```{r exercise1assumptioncheck, error = T}
+# Replace this text with your code!
+
+```
+
+*Exercise 1b-Plot Conclusion:* Comment on if the stated assumption above is reasonable based on the plot. Briefly explain why. 
+
+*Exercise 1c-Analysis:* Comment on if whether or not you can proceed with the statistical analysis. Briefly explain why. 
+
+
+
+> **Exercise 2.** Create a 90% confidence interval for the parameter of interest. Based on the 90% confidence interval, can you suggest that the average requested funding for all entrepreneurs pitching a business idea on Shark Tank is above a quarter million US dollars (250,000 US dollars)? Why or why not? 
+
+```{r exercise2, error = T}
+# Replace this text with your code!
+
+```
+
+*Exercise 2 - Answer:* Comment on if whether or not you can suggest that the average requested funding for all entrepreneurs pitching a business idea on Shark Tank is above $250,000. Briefly explain why or why not. 
+
+
+***
+#### Analysis 2: Difference in Two Means  
+
+For Exercises 3 - 6, you will complete the following analysis. 
+
+From the seven questions of interest listed above, select one question you would like to answer that requires analysis for the difference in two means.  Think about the variable types posed in your question.
+
+>**Exercise 3.** Paste the question you selected.  Identify the quantiative response variable, and the two groups.  Finally, using notation, write out the null and alternative hypotheses.  Define the parameter(s) of insterest. 
+
+*Paste the question selected:* Replace this text with the question you selected. 
+
+*Quantitative Response Variable:* Replace this text with the quantitative response variable of interest. 
+
+*Group 1:* Replace this text with group 1. 
+
+*Group 2:* Replace this text with group 2. 
+
+*H0:* Replace this text with your null hypothesis
+
+*Ha:* Replace this text with your alternative hypothesis
+
+*Parameter Definition:* Replace this text with the definition of the parameter(s).
+
+
+> **Exercise 4.** Descriptive exploration of the data. 
+
+*Exercise 4a - Side-by-side Boxplot:* Create a side-by-side boxplot to compare the responses across the two groups descriptively. 
+
+```{r exercise4aboxplot, error = T}
+# Replace this text with your code!
+
+```
+
+*Exercise 4b - Numerical Summaries:* Using the `aggregate()` function, calculate the mean of the quantitative response variable for each of the two groups. 
+
+```{r exercise4baggregate, error = T}
+# Replace this text with your code!
+
+```
+
+*Exercise 4c - Observations:* Finally, Briefly comment on whether your plot and numerical summaries appear to provide evidence for the alternative hypothesis in Exercise 3.
+
+*Exercise 4c - Answer:* Replace this text with your comment on whether your plot and numerical summaries appear to provide evidence for the alternative hypothesis in Exercise 3.
+
+
+
+> **Exercise 5.** Assumptions - You may assume that the two groups of responses are random, independent samples. State the additional assumption needed to perform this analysis.
+
+*Exercise 5a - Stated Assumption:* Replace this text with your answer.
+
+
+*Checking Assumption:*  Use the code chunks provided to check the assumption. Below the code chunk, comment on whether or not the stated assumption is reasonable *and* comment on whether of nor you can proceed with the statistical analysis. Briefly explain both of your answers. 
+
+```{r exercise5subset1, error = T}
+# Replace this text with your code!
+
+```
+
+```{r exercise5plot1, error = T}
+# Replace this text with your code!
+
+```
+
+```{r exercise5subset2, error = T}
+# Replace this text with your code!
+
+```
+
+```{r exercise5plot2, error = T}
+# Replace this text with your code!
+
+```
+
+*Exercise 5b - Plot Conclusions:* Comment on if the stated assumption above is reasonable based on the two plots. Briefly explain why. 
+
+
+*Exercise 5c - Analysis:* Comment on if whether or not you can proceed with the statistical analysis. Briefly explain why. 
+
+
+
+> **Exercise 6.** Analysis - Use R to test the hypotheses from Exercise 3. Provide an evaluation of the p-value. Note: you do not need to provide a conclusion.
+
+*Exercise 6a:* Run R to test the hypotheses from Exercise 3. 
+
+```{r exercise6, error = T}
+# Replace this text with your code!
+
+```
+
+*Exercise 6b - Evaluation:* Replace this text with your answer.
+
+*** 
+
+#### Analysis 3: Difference in Two Proportions 
+
+For Exercises 7 - 10, you will complete the following analysis. 
+
+From the seven questions of interest listed above, select one question you would like to answer that requires analysis for the difference in two proportions.  Think about the variable types posed in your question.
+
+>**Exercise 7.** Paste the question you selected.  Since you will be running a hypothesis test for the difference in two proportions, you will need to compare two groups. Before you start the analysis process, identify the categorical response variable, group 1 and group 2. 
+
+*Categorical Response Variable:* Replace this text with the categorical response variable of interest. 
+*Group 1:* Replace this text with group 1. 
+*Group 2:* Replace this text with group 2. 
+
+
+>**Exercise 8.**Using notation, write out the null and alternative hypotheses.  Define the parameter(s) of insterest.  
+
+*Paste the question selected:* Replace this text with the question you selected. 
+
+*H0:* Replace this text with your null hypothesis
+
+*Ha:* Replace this text with your alternative hypothesis
+
+*Parameter Definition:* Replace this text with the definition of the parameter(s).
+
+
+>**Exercise 9.** Descriptive exploration of the data. 
+
+*Exercise 9a - Two-way Table:* Create a two-way table to compare the categorical responses across the two groups descriptively. Be sure to use the `addmargins()` function to include the row and column totals. 
+
+```{r exercise9aTable, error = T}
+# Replace this text with your code!
+
+```
+
+*Exercise 9b* Using the two-way table, identify the number of successes in group 1 and the number of successes in group 2.  Compute the sample proportion for each group and the point estimate for the parameter of interest (defined in Exercise 8).  
+
+```{r exercise9b, error = T}
+# Replace this text with your code!
+
+```
+
+*Exercise 9b - Answer:* Replace this text with the point estimate for the parameter of interest.
+
+
+*Exercise 9c - Grouped Bar Chart:* Finally, you will create a grouped bar graph to visually compare the categorical response across the two groups of interest.  Be sure to add color because you will be including this plot as part of your report. 
+
+```{r exercise9c, error = T}
+# Replace this text with your code!
+
+```
+
+
+> **Exercise 10.** Analysis - Use the `twoPopPropHT()` function to test the hypotheses from Exercise 7. Provide an evaluation of the p-value. Note: you do not need to provide a conclusion. 
+
+*Exercise 10a:* Run R to test the hypotheses from Exercise 7. 
+
+```{r exercise10, error = T}
+# Replace this text with your code!
+
+```
+
+*Exercise 10b - Evaluation:* Replace this text with your answer.
+
+
+***
+
+
+### Submission Instructions
+
+Once you have finished, follow the instructions below to submit your work.
+
+1. At the top of the document, update the `author` field. Do not change anything else at the top of the document.
+
+2. Click the Knit button to create an HTML file of your work.
+
+3. In the Files pane (bottom right window), check the box next to `project2supplement.html`.
+
+4. In the Files pane, click on the gear icon (More) and select "Export..."  
+
+5. Do not change the file name (`project2supplement.html`). Click Download and save the file to your computer. 
+
+6. On the Stats 250 Canvas site, navigate to the Project #2 Supplement Work assignment. 
+
+7. Upload your saved `project2supplement.html` file. 
+
+8. Click "Submit Assignment". Congratulations, you are done with the fist part of Project #2! Note: there will be no file submission for the Lab 7 assignment on Canvas.
